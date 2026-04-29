@@ -72,9 +72,9 @@ nav.compact{padding:16px 56px;background:rgba(10,10,10,0.85);backdrop-filter:blu
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 
 /* MODAL */
-.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:500;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s;padding:24px;}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:500;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s;padding:24px;overflow-y:auto;}
 .modal-overlay.open{opacity:1;pointer-events:auto;}
-.modal{background:#f0efe9;max-width:760px;width:100%;max-height:90vh;overflow-y:auto;position:relative;transform:translateY(24px);transition:transform .35s cubic-bezier(.16,1,.3,1);}
+.modal{background:#f0efe9;max-width:760px;width:100%;max-height:90vh;overflow-y:auto;-webkit-overflow-scrolling:touch;position:relative;transform:translateY(24px);transition:transform .35s cubic-bezier(.16,1,.3,1);}
 .modal-overlay.open .modal{transform:translateY(0);}
 .modal-close{position:absolute;top:16px;right:16px;width:36px;height:36px;background:#111;color:white;border:none;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;touch-action:manipulation;}
 .modal-img{width:100%;height:260px;object-fit:cover;object-position:center top;display:block;}
@@ -92,8 +92,8 @@ nav.compact{padding:16px 56px;background:rgba(10,10,10,0.85);backdrop-filter:blu
 /* MODAL CAROUSEL */
 .modal-carousel{position:relative;background:#111;overflow:hidden;}
 .modal-carousel-img{width:100%;height:340px;object-fit:contain;object-position:center;display:block;transition:opacity .3s;background:#111;}
-.modal-carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.15);color:white;border:none;width:40px;height:40px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;touch-action:manipulation;transition:background .2s;}
-.modal-carousel-btn:hover{background:rgba(255,255,255,0.35);}
+.modal-carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:#111;color:white;border:none;width:44px;height:44px;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;touch-action:manipulation;transition:background .2s;}
+.modal-carousel-btn:hover{background:#333;}
 .modal-carousel-btn.prev{left:12px;}
 .modal-carousel-btn.next{right:12px;}
 .modal-carousel-count{position:absolute;bottom:8px;right:12px;font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.4);letter-spacing:2px;}
@@ -618,7 +618,7 @@ const projects = {
     awards: ['🏆 Best Coder — SE 309'],
     desc: 'A team-built Android application designed to teach financial literacy through gamification. I developed frontend UI components and backend logic, including secure login/signup flows and in-game financial systems. We implemented integrated CI/CD pipelines and testing while participating in Agile sprints and code reviews. Our team earned Best Coder and Honorable Mention recognition from the class.',
     tags: ['Java','Spring Boot','Android','CI/CD','Agile','Firebase'],
-    imgs: ['uploads/cycredit1.png','uploads/cycredit2.png'],
+    imgs: [],
     links: [{label:'▶ Watch Demo', url:'https://youtu.be/_fhUdBthpU4?si=eileYlWpE0KALDnJ'}],
     year: '2025 – Present'
   },
@@ -629,7 +629,7 @@ const projects = {
     awards: [],
     desc: 'A full-stack web application for navigating Iowa State University campus buildings and landmarks. I built responsive frontend interfaces and RESTful APIs with full CRUD functionality for location management. Features include an interactive campus map, admin dashboard, user management, and building directory. The project focused on usability and scalable architecture, resulting in an A grade.',
     tags: ['JavaScript','REST APIs','HTML','CSS','Node.js','MongoDB'],
-    imgs: ['uploads/campus1.png','uploads/campus2.png','uploads/campus3.png'],
+    imgs: [],
     links: [{label:'▶ Watch Demo', url:'https://youtu.be/uoPVfutrBFg'}],
     year: 'Aug – Dec 2025'
   },
@@ -662,7 +662,7 @@ const projects = {
     awards: ['🥇 1st Place — Drone Competition'],
     desc: 'Led a team of 5 to first place in a drone competition. Constructed the drone from balsa wood, servos, and batteries — handling everything from design to final flight. Demonstrated strong leadership, problem-solving, and hands-on engineering skills.',
     tags: ['Hardware','Team Lead','Engineering','SolidWorks'],
-    imgs: ['uploads/appa1.png','uploads/appa2.png','uploads/appa3.png'],
+    imgs: [],
     links: [],
     year: 'Oct – Dec 2022'
   },
